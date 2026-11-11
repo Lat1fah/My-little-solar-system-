@@ -1,0 +1,24 @@
+The goal is to generate a visual representatio of the solar system. 
+I will use HTML
+Basically we want the:
+size of the planets (ofc larger and smaller planets need their design imagined by number of pixels)
+Maybe let me just use 3 outer space bodies:
+Sun
+Earth 
+Moon
+Each will have a "class" of their own
+Wrapped in divs
+Positioning will be absolute and relative depending on the outer space body in question. 
+
+In future I will want to render the entire solar system and milky way and Andromeda into this cool project. 
+For now let me create a smaller project. 
+
+USE CASES:
+Kids learning the solar system
+Museums and planetariums 
+Really cool nigh light projector I guess 
+
+
+
+
+

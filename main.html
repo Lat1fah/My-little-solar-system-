@@ -12,7 +12,7 @@
                 overflow: hidden;
             }
             .container {
-                font-size: 10px;
+                font-size: 1.8vmin;  /* scales with the window */
                 width: 40em;
                 height: 40em;
                 position: relative;
@@ -23,31 +23,28 @@
                 left: 15em;
                 width: 10;
                 height: 10em;
-                background-color:yellow;
+                background: radial-gradient(circle, fff7a8, gold 60%, orange);
                 border-radius: 50%;
-                box-shadow: 0 0 3em white;
+                box-shadow: 0 0 4em orange;
             }
             .earth,.moon {
                 position: absolute;
-                border-style: solid;
-                border-color: white
-                transparent
-                transparent
-                transparent;
-             border-width: 0.1em 0.1em 0 0; 
-             border-radius: 50%;  
-            }
+                box-sizing: border-box;
+                border: 0.1em solid rgba(255, 255, 255, 0.15); /*faint full orbit*/
+                border-top-color: white;                       /* and a bright arc that sweeps/drags*/
+                border-radius: 50%;  
+            } 
             .earth {
-                top: 5em;
-                left: 5em;
+                top: -10em; /*centers the 30em ring on the 10em sun*/
+                left: -10em;
                 width: 30em;
                 height: 30em;
                 animation: orbit 36.5s
                     linear infinite;
             }
-            .moon {
-                top: 0;
-                right: 0;
+            .moon { 
+                top: -4em; /* this should center the moon ring on where the earth dot is*/
+                left: calc(50% -4em);
                 width: 8em;
                 height: 8em;
                 animation: orbit 2.7s
@@ -67,8 +64,8 @@
                 background-color: aqua;
             }
             .moon::before, {
-                top: 0.8em; ;
-                right: 2.8em; 
+                top: -0.6em; ;
+                left: calc(50% -0.6em);
                 width: 1.2em; 
                 height: 1.2em; 
                 background-color: silver;
